@@ -2,7 +2,9 @@
 
 ## Project setup
 ```
-npm install
+1. npm install
+2. Install extensión chrome Allow CORS: Access-Control-Allow-Origin.
+3. Activate installed extension.
 ```
 
 ### Compiles and hot-reloads for development

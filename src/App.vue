@@ -95,7 +95,7 @@ export default {
     this._getComic();
   },
   methods: {
-    randomComic: function () {
+    randomComic() {
       this._resetValues();
       this._getComic();
     },
