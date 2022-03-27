@@ -27,15 +27,24 @@
         </div>
 
         <v-card-actions>
-          <v-btn color="blue" text v-on:click="randomComic()">
-            Random Comic
-          </v-btn>
+          <v-tooltip top>
+            <template v-slot:activator="{ on, attrs }">
+              <v-btn color="blue" text v-on:click="randomComic()" v-bind="attrs" v-on="on">
+                Random Comic
+              </v-btn>
+            </template>
+            <span>Press for a new comic</span>
+          </v-tooltip>              
 
           <v-spacer></v-spacer>
-
-          <v-btn icon @click="show = !show">
-            <v-icon>{{ show ? "mdi-chevron-up" : "mdi-chevron-down" }}</v-icon>
-          </v-btn>
+          <v-tooltip top>
+            <template v-slot:activator="{ on, attrs }">
+              <v-btn icon @click="show = !show" v-bind="attrs" v-on="on" color="blue">
+              <v-icon>{{ show ? "mdi-chevron-up" : "mdi-chevron-down" }}</v-icon>
+            </v-btn>
+            </template>
+            <span>More information</span>
+          </v-tooltip>
         </v-card-actions>
 
         <v-expand-transition>
